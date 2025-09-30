@@ -31,15 +31,15 @@ BACKGROUND_AUDIO = "/home/rms/youtube/background.mp3"  # set None to disable
 
 PRIVACY_STATUS = "public"   # "public" | "unlisted" | "private"
 CATEGORY_ID    = "28"       # Science & Technology
-STATION_ID     = "UK00DF"
+STATION_ID     = "UKXXXX"   # ADD YOIR STATION ID
 
-TITLE_TEMPLATE = "Ramsbottom Meteor Summary   {date}  {station}"
+TITLE_TEMPLATE = "Meteor Summary   {date}  {station}"
 DESC_TEMPLATE  = (
-    "Located in Ramsbottom, North Manchester, England, the camera points NNW, just to the right of Holcombe Tower and uploads to the Global Meteor Network with station ID - {station}.\n"
+    "Located in XXXXXXXXXX, the camera points XXX and uploads to the Global Meteor Network with station ID - {station}.\n"
     "Date: {date}\n"
-    "#meteor #GMN #MeteorNetwork #Ramsbottom"
+    "#meteor #GMN #MeteorNetwork"
 )
-TAGS = ["meteor","GMN","RMS","meteor detection","night sky","Ramsbottom"]
+TAGS = ["meteor","GMN","RMS","meteor detection","night sky"]
 
 # Image keywords (must appear in filename, in this order)
 IMAGE_KEYWORDS = [
@@ -335,9 +335,9 @@ def main():
     meteors = meteor_count  # may be None if not found, but we required ≥1 so usually an int
 
     if meteors is not None:
-        title = f"Ramsbottom Meteor Camera on {up_date} with {meteors} Meteors Detected  {STATION_ID}"
+        title = f"Meteor Camera on {up_date} with {meteors} Meteors Detected  {STATION_ID}"
     else:
-        title = f"Ramsbottom Meteor Camera on {up_date}  {STATION_ID}"
+        title = f"Meteor Camera on {up_date}  {STATION_ID}"
 
     desc = DESC_TEMPLATE.format(date=up_date, station=STATION_ID, filename=final_video.name)
     if meteors is not None:
